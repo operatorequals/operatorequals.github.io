@@ -1,0 +1,50 @@
+data:
+- company: Form3 UK
+  startDate: Feb. 2023
+  endDate: Present
+  position: Senior IT Security Engineer
+  details:
+  - Designed and implemented a Multi-Cloud (AWS, GCP, Azure) Monitoring Infrastructure using Chronicle SIEM
+  - Maintained Multi-Cloud Access-Control based on HashiCorp Vault
+  - Worked on supply chain security by integrating Sigstore Suite for artifact attestation
+  - Developed Infrastructure-as-Code security solutions using Terraform
+  - Acted as a Security Ambassador, communicating security best-practices across engineering teams
+
+- company: Skroutz S.A.
+  startDate: Feb. 2020
+  endDate: Nov. 2022
+  position: Senior IT Security Engineer & Team Tech Lead
+  details:
+  - Led security monitoring architecture for AWS, Kubernetes using the Elastic Stack
+  - Architect of Security for Cloud migration
+  - Designed of SecDevOps pipelines using Github Workflows
+  - Spearheaded Agile-based team management, enhancing efficiency in team workflows
+
+- company: Beat Mobility Services - FreeNOW
+  startDate: Oct. 2019
+  endDate: Dec. 2020
+  position: IT Security Engineer
+  details:
+  - Established security processes and roadmap for a newly formed security vertical
+  - Architect of Cloud-Native Security Monitoring based on AWS and Kubernetes
+  - Secure Coding Training for Backend (PHP) and Mobile (Java/Swift) developers
+  - Conducted scheduled Penetration Tests on internal services and perimeter
+
+- company: CENSUS S.A.
+  startDate: Feb. 2017
+  endDate: Jul. 2019
+  position: IT Security Engineer & Researcher
+  details:
+  - Led several Infrastructure Penetration Tests and Red Team assessments
+  - Conducted Mobile and Web Application Security assessments
+  - Designed and deployed infrastructure for Red Team tooling using Terraform and AWS
+  - Conducted Code Audits and Host Hardening Assessments
+  - Communicated vulnerabilities to client technical teams and executives, through presentations and reports
+
+- company: ENCODE S.A.
+  startDate: Apr. 2016
+  endDate: Jan. 2017
+  position: Security Operation Center Analyst
+  details:
+  - Conducted log analysis and threat detection using IBM QRadar SIEM
+  - Assessed on Network Topologies for various Enterprise Environments

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    {{ partial "head/metadata.html" . }}
+    {{ partial "head/css.html" . }}
+    {{ partial "bootstrap/css.html" . }}
+    {{ partial "bootstrap/icons.html" . }}
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">{{ .Title }}</h1>
+        {{ partial "home/social.html" . }}
+        
+        <div class="card mt-4 mb-4">
+            <div class="card-body">
+                <h3 class="card-title">Experience</h3>
+                {{ range .Site.Data.cv.experience.data }}
+                <div id="experience" class="experience-entry mb-4">
+                    <h5 class="font-weight-bold"><i>{{ .position }}</i> at {{ .company }}</h5>
+                    <p class="text-muted">
+                        <strong>{{ .startDate }}</strong> - <strong>{{ .endDate }}</strong>
+                    </p>
+                    <ul class="list-unstyled">
+                        {{ range .details }}
+                        <li><i class="fas fa-check-circle"></i> {{ . }}</li>
+                        {{ end }}
+                    </ul>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+
+    {{ partial "nav.html" . }}
+
+    <script>
+        // List of words to be bolded
+        const buzzWords = [
+        'AWS', 'GCP', 'Azure',
+        'Hashicorp Vault', 'Chronicle SIEM', 'IBM QRadar SIEM',
+        'Github Workflows', 'Terraform',
+        'Elastic Stack', 'Kubernetes',
+        'Sigstore Suite',
+        ];
+
+        // List of words to be italics
+        const skillWords = [
+        'SecDevOps', 'Agile-based', 'Monitoring', 'Infrastructure',
+        'Multi-Cloud', 'Access-Control',
+        'Infrastructure-as-Code', 'Security Ambassador',
+        'Cloud-Native', 'Security Monitoring', 'Secure Coding Training',
+        'Penetration Tests?', 'Red Team', 'Application Security',
+        ]
+
+        // Function to bold specific words
+        function boldWords() {
+            // Loop through the list of words and wrap them in <strong> tags
+            buzzWords.forEach(word => {
+                // Get the entire body content
+                const bodyText = document.body.innerHTML;
+                // Regular expression to match the word with case-insensitivity
+                const regex = new RegExp(`(${word})`, 'gi');
+                // Replace the word with bold version using <strong> tag
+                document.body.innerHTML = bodyText.replace(regex, '<strong>$1</strong>');
+            });
+        }
+
+        function italicWords() {
+            // Loop through the list of words and wrap them in <strong> tags
+            skillWords.forEach(word => {
+                // Get the entire body content
+                const bodyText = document.body.innerHTML;
+                // Regular expression to match the word with case-insensitivity
+                const regex = new RegExp(`(${word})`, 'gi');
+                // Replace the word with bold version using <strong> tag
+                document.body.innerHTML = bodyText.replace(regex, '<i>$1</i>');
+            });
+        }
+
+        // Call the function to bold words when the page loads
+        window.onload = ()=>{boldWords();italicWords();}
+    </script>
+
+    {{ partial "footer/text.html" . }}
+    {{ partial "footer/scripts.html" . }}
+
+</body>
+</html>
