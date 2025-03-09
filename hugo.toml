@@ -1,3 +1,78 @@
-baseURL = 'https://example.org/'
+baseURL = 'http://127.0.0.1:1313/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'John Torakis'
+enableGitInfo = true
+
+theme = ['introduction']
+
+# Introduction theme
+[params]
+	footerText = "Made with <3 by _John Torakis_ ([@operatorequals](https://github.com/operatorequals))\n\nHugo Theme: [Introduction](https://github.com/victoriadrake/hugo-theme-introduction)"
+
+    themeStyle                   = "auto"                  # Choose "light" or "dark" or "auto"
+    favicon                      = "/img/fav.ico"          # Path to favicon file
+    showMenu                     = true                    # Show navigation menu
+    showRSSButton                = false                   # Show rss button in navigation
+    fadeIn                       = false                    # Turn on/off the fade-in effect
+    fadeInIndex                  = false                   # Turn on/off the fade-in effect on the index page even if fade-in was otherwise turned off
+    dateFormat                   = "Jan 2, 2006"
+    email                        = "john.torakis@gmail.com"   # E-mail address for contact section
+    # customCSS                  = ["foo.css"]             # Include custom css files placed under assets/
+    # customJS                   = ["foo.js"]              # Include custom JavaScript files placed under assets/
+
+
+    # Configure the home page
+    [params.home]
+        introHeight              = "fullheight"            # Input either "medium" or "large" or "fullheight"
+        showLatest               = true                    # Show latest blog post summary false to link to separate blog list page
+        allPostsArchiveFormat    = true                    # show all posts in an archive format
+        numberOfProjectsToShow   = 0                       # Maximum number of projects to show on home page. Unset or comment out to show all projects
+        localTime                = true                    # Show your current local time in contact section
+        timeZone                 = "Europe/Athens"	    	# Your timezone as in the TZ* column of this list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+        timeFormat               = "en-US"                 # Language specific format to use
+
+    [[params.social]]
+        url   = "https://linkedin.com/in/johntorakis"
+        icon  = "linkedin-in" # icon name without the 'fa-'
+        icon_pack = "fab"
+        html_attributes = "target=\"_blank\""
+        
+    [[params.social]]
+        url = "mailto:john-torakis@gmail.com"  # For a direct email link, use "mailto:test@example.org".
+        icon = "paper-plane" # icon name without the 'fa-'
+        icon_pack = "fas"
+
+    [[params.social]]
+        url = "https://github.com/operatorequals"
+        icon = "github" # icon name without the 'fa-'
+        icon_pack = "bi"
+
+[[menu.main]]
+    name    = "Home"
+    url     = "/"
+    weight  = 1
+
+[[menu.main]]
+    name    = "Expertise"
+    url     = "/#expertise"
+    weight  = 10
+
+# [[menu.main]]
+#     name    = "Projects"
+#     url     = "/projects"
+#     weight  = 50
+
+[[menu.main]]
+    name    = "Résumé"
+    url     = "/resume"
+    weight  = 20
+
+[[menu.main]]
+    name    = "Contact"
+    url     = "/#contact"
+    weight  = 100
+
+[[menu.resume]]
+    name    = "tests"
+    url     = "/asas"
+    weight  = 1
