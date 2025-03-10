@@ -1,0 +1,13 @@
+
+data:
+- title: OSCP
+  date: 2019
+  description: Offensive Security Certified Professional
+  member-id: 45353
+  certificateId: OS-101-20872
+
+- title: SPSE
+  date: 2016
+  description: SecurityTube Python Scripting Expert
+  member-id: 1959
+  certificateId: 1959

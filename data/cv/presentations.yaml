@@ -1,0 +1,27 @@
+data:
+- title: A Dive into the Psychology of Red Teaming Athens
+  place: Athens, Greece
+  role: Guest Presenter
+  organization: Hackcraft Labs Event
+  date: Mar 2024
+  url: https://psychotropes.wiki/presentations/#_a-dive-into-the-psychology-of-red-teaming_
+  topics:
+  - Talked about psychological pitfalls of Red-Team engagements
+
+- title: Tales from the DevSecOps world - a SIEM completely "as-Code"
+  place: Athens, Greece
+  role: Presenter
+  organization: Security BSides Athens
+  date: Jun 2022
+  url: https://www.youtube.com/watch?v=5ssqlLyYv8E
+  topics:
+  - Introduced Terraform Repository for Elastic SIEM deployments
+
+- title: Unexpected Shells with "covertutils"
+  place: Bucharest, Romania
+  role: Presenter
+  organization: DEFCAMP 8TH International Conference
+  date: Nov 2017
+  url: https://www.youtube.com/watch?v=ngIQfYs3wM0
+  topics:
+  - Introduced "covertutils" - a Framework for Remote Administration Tool Design and Implementation

@@ -1,0 +1,25 @@
+data:
+- title: Securosophy Blog
+  url: www.securosophy.com
+  role: Creator & Author
+  year: 2016
+  description: IT Security blog spiced up with the psychology of the human factor
+
+- title: Security Sky-Gazing
+  url: https://web.archive.org/web/20201118093539/https://build.thebeat.co/security-sky-gazing-16cf158a759a?gi=7ae3f7b1ccbe
+  originalUrl: https://build.thebeat.co/security-sky-gazing-16cf158a759a
+  role: Author
+  year: 2020
+  description: How we deployed a Security Monitoring and Alerting system @ Beat
+
+- title: Security Advisory for CVE-2017-9807
+  url: https://census-labs.com/news/2017/10/02/e2openplugin-openwebif-saveconfig-remote-code-execution
+  role: Author
+  year: 2017
+  description: e2openplugin OpenWebif saveConfig remote code execution
+
+- title: ExploitDB
+  url: https://www.exploit-db.com/papers?author=8819
+  role: Paper Author
+  year: 2016
+  description: Papers on applied TCP/IP steganography

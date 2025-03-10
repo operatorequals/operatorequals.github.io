@@ -1,0 +1,16 @@
+
+data:
+- title: httpimport
+  repository: operatorequals/httpimport
+  role: Author
+  description: Python in-memory 'import' through HTTP/S
+
+- title: Git Interactive Course
+  repository: operatorequals/git-course
+  role: Author
+  description: A deployable challenge-based course to Git common use-cases
+
+- title: k8s-net-expose
+  repository: operatorequals/k8s-net-expose
+  role: Author
+  description: Exposes Kubernetes internals to the Internet through VPSs
