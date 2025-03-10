@@ -2,27 +2,27 @@
     {{ range .Site.Params.social }}
       {{ if eq .icon_pack "fa" }}
         <a href="{{ .url }}" {{ .html_attributes | safeHTMLAttr }}>
-          <i class="{{ .icon_pack}} fa-{{ .icon}}"></i>
+          <i class="{{ .icon_pack}} fa-{{ .icon}} social"></i>
         </a>
       {{ end }}
       {{ if eq .icon_pack "fab" }}
         <a href="{{ .url }}" {{ .html_attributes | safeHTMLAttr }}>
-          <i class="{{ .icon_pack}} fab fa-{{ .icon}}"></i>
+          <i class="{{ .icon_pack}} fab fa-{{ .icon}} social"></i>
         </a>
       {{ end }}
       {{ if eq .icon_pack "fas" }}
         <a href="{{ .url }}" {{ .html_attributes | safeHTMLAttr }}>
-          <i class="{{ .icon_pack}} fas fa-{{ .icon}}"></i>
+          <i class="{{ .icon_pack}} fas fa-{{ .icon}} social"></i>
         </a>
       {{ end }}
       {{ if eq .icon_pack "ai" }}
         <a href="{{ .url }}" {{ .html_attributes | safeHTMLAttr }}>
-          <i class="{{ .icon_pack}} ai-{{ .icon}} ai-1.9x"></i>
+          <i class="{{ .icon_pack}} ai-{{ .icon}} ai-1.9x social"></i>
         </a>
       {{ end }}
       {{ if eq .icon_pack "bi" }}
         <a href="{{ .url }}" {{ .html_attributes | safeHTMLAttr }}>
-          <i class="{{ .icon_pack}} bi-{{ .icon}}"></i>
+          <i class="{{ .icon_pack}} bi-{{ .icon}} social"></i>
         </a>
       {{ end }}
 

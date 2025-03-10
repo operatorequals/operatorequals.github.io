@@ -1,8 +1,9 @@
 +++
 title = 'John Torakis - Résumé'
 headless = false
-layout = 'resume/resume'
+layout = 'resume'
+type = 'page'
+
+[params]
+	location = "Athens, Greece"
 +++
-
-{{< access-data >}}
-

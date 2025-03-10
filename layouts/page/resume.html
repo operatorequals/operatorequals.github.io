@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    {{ partial "head/metadata.html" . }}
+    {{ partial "head/css.html" . }}
+    {{ partial "bootstrap/css.html" . }}
+    {{ partial "bootstrap/icons.html" . }}
+
+    <!-- Small CSS fixes -->
+    <style>
+    /*Get the NavBar stay centered*/
+    .navbar-menu{justify-content: center}
+
+    .social{color: #00b8d4;font-size:1.6em;}
+    a{text-decoration: none;}
+    </style>
+
+</head>
+<body>
+    <div class="container mt-5">
+
+        <div class="title-container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="mb-4">{{ .Title }}</h1>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div>
+                {{ partial "home/social.html" . }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mt-4 mb-4">
+            <div class="card-body">
+                <span id="hightlightable">
+                    <h3 class="card-title">Summary</h3>
+                    <p>{{ .Site.Data.cv.summary.data | markdownify }}</p>
+
+                    <h3 class="card-title">Experience</h3>
+                    <div id="experience">
+                    {{ range .Site.Data.cv.experience.data }}
+                    <div class="experience-entry mb-4">
+                        <h5 class="font-weight-bold"><i>{{ .position }}</i> at {{ .company }}</h5>
+                        <p class="text-muted">
+                            <strong>{{ .startDate }}</strong> - <strong>{{ .endDate }}</strong>
+                        </p>
+
+                        <ul class="list-unstyled">
+                            {{ range .details }}
+                            <li><i class="bi bi-arrow-right-short"></i> {{ . | markdownify }}</li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                    {{ end }}
+                    </div>
+                </span>
+
+                <h3 class="card-title">Writings</h3>
+                <div id="writings" class="list-group mb-4">
+                    {{ range .Site.Data.cv.writings.data }}
+                    <a href="{{ .url }}" target="_blank" class="list-group-item list-group-item-action">
+                        <h5 class="mb-1">{{ .title }}</h5>
+                        <small class="text-muted">{{ .role }}, {{ .year }}</small>
+                        <p class="mb-1">{{ .description | markdownify }}</p>
+                    </a>
+                    {{ end }}
+                </div>
+
+                <h3 class="card-title">Presentations</h3>
+                <div id="presentations" class="list-group mb-4">
+                    {{ range .Site.Data.cv.presentations.data }}
+                    <a href="{{ .url }}" target="_blank" class="list-group-item list-group-item-action">
+                        <h5 class="mb-1"><i class="bi bi-file-play-fill mr-1"></i>{{ .title }}</h5>
+                        <small class="text-muted">{{ .organization }} - {{ .place }} ({{ .date }})</small>
+                        <p class="mb-1">{{ .role }}</p>
+                        <ul>
+                            {{ range .topics }}
+                            <li><i class="bi bi-arrow-right-short"></i>{{ . | markdownify }}</li>
+                            {{ end }}
+                        </ul>
+                    </a>
+                    {{ end }}
+                </div>
+
+                <h3 class="card-title">Projects</h3>
+                <div id="projects" class="list-group mb-4">
+                    {{ range .Site.Data.cv.projects.data }}
+                    <a href="{{ .repository }}" target="_blank" class="list-group-item list-group-item-action">
+                        <h5 class="mb-1"><i class="bi bi-github mr-1"></i><code>{{ .title }}</code></h5>
+                        <p class="mb-1">{{ .description | markdownify }}</p>
+                    </a>
+                    {{ end }}
+                </div>
+
+                <h3 class="card-title">Certifications</h3>
+                <div id="certifications" class="list-group mb-4">
+                    {{ range .Site.Data.cv.certifications.data }}
+                    <div class="list-group-item list-group-item-action">
+                        <h5 class="mb-1"><i class="bi bi-file-earmark mr-1"></i>{{ .description }} ({{ .title }})</h5>
+                        <small class="text-muted"><i>{{ .certificateId }}</i> ({{ .date }})</small>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        {{ partial "nav.html" . }}
+    </div>
+
+
+    <script>
+        // List of words to be bolded
+        const buzzWords = [
+        'AWS', 'GCP', 'Azure',
+        'Hashicorp Vault', 'Chronicle SIEM', 'IBM QRadar SIEM',
+        'Github Workflows', 'Terraform',
+        'Elastic Stack', 'Kubernetes',
+        'Sigstore Suite',
+        'Cybersecurity Engineer',
+        ];
+
+        // List of words to be italics
+        const skillWords = [
+        'Infrastructure-as-Code',
+        'SecDevOps', 'Agile-based', 'Monitoring', '(Cloud )?Infrastructure',
+        'Multi-Cloud', 'Access-Control',
+        'Security Ambassador', 'Supply Chain Security',
+        'Cloud-Native', 'Security Monitoring', 'Secure Coding Training',
+        'Penetration Tests?(ing)?', 'Red Team', 'Application Security',
+        'Secure Software Development Lifecycle', 'Hardening',
+        'Cloud Architectures?', 'Security Operations',
+
+        ]
+
+        targetElement = document.getElementById("hightlightable")
+        // Function to bold specific words
+        function boldWords() {
+            // Loop through the list of words and wrap them in <strong> tags
+            buzzWords.forEach(word => {
+                // Get the entire body content
+                const bodyText = targetElement.innerHTML;
+                // Regular expression to match the word with case-insensitivity
+                const regex = new RegExp(`(${word})`, 'gi');
+                // Replace the word with bold version using <strong> tag
+                targetElement.innerHTML = bodyText.replace(regex, '<strong>$1</strong>');
+            });
+        }
+
+        function italicWords() {
+            // Loop through the list of words and wrap them in <strong> tags
+            skillWords.forEach(word => {
+                // Get the entire body content
+                const bodyText = targetElement.innerHTML;
+                // Regular expression to match the word with case-insensitivity
+                const regex = new RegExp(`(${word})`, 'gi');
+                // Replace the word with bold version using <strong> tag
+                targetElement.innerHTML = bodyText.replace(regex, '<i>$1</i>');
+            });
+        }
+
+        // Call the function to bold words when the page loads
+        window.onload = ()=>{boldWords();italicWords();}
+    </script>
+
+    {{ partial "footer/text.html" . }}
+    {{ partial "footer/scripts.html" . }}
+
+</body>
+</html>
