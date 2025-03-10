@@ -9,7 +9,7 @@ theme = ['introduction']
 [params]
 	footerText = "Made with ❤️ by _John Torakis_ ([@operatorequals](https://github.com/operatorequals))\n\nHugo Theme: [Introduction](https://github.com/victoriadrake/hugo-theme-introduction)"
 
-    themeStyle                   = "auto"                  # Choose "light" or "dark" or "auto"
+    themeStyle                   = "light"                  # Choose "light" or "dark" or "auto"
     favicon                      = "/img/fav.ico"          # Path to favicon file
     showMenu                     = true                    # Show navigation menu
     showRSSButton                = false                   # Show rss button in navigation
