@@ -7,7 +7,7 @@ theme = ['introduction']
 
 # Introduction theme
 [params]
-	footerText = "Made with <3 by _John Torakis_ ([@operatorequals](https://github.com/operatorequals))\n\nHugo Theme: [Introduction](https://github.com/victoriadrake/hugo-theme-introduction)"
+	footerText = "Made with ❤️ by _John Torakis_ ([@operatorequals](https://github.com/operatorequals))\n\nHugo Theme: [Introduction](https://github.com/victoriadrake/hugo-theme-introduction)"
 
     themeStyle                   = "auto"                  # Choose "light" or "dark" or "auto"
     favicon                      = "/img/fav.ico"          # Path to favicon file
@@ -46,6 +46,7 @@ theme = ['introduction']
         url = "https://github.com/operatorequals"
         icon = "github" # icon name without the 'fa-'
         icon_pack = "bi"
+        html_attributes = "target=\"_blank\""
 
 [[menu.main]]
     name    = "Home"
@@ -71,8 +72,3 @@ theme = ['introduction']
     name    = "Contact"
     url     = "/#contact"
     weight  = 100
-
-[[menu.resume]]
-    name    = "tests"
-    url     = "/asas"
-    weight  = 1
