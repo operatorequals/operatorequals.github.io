@@ -1,0 +1,13 @@
+{
+  "name": "operatorequals-webpage",
+  "version": "1.0.0",
+  "description": "Personal page of John Torakis (@operatorequals)",
+  "keywords": [],
+  "author": "John Torakis",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.0"
+  }
+}
