@@ -72,9 +72,9 @@
                 <h2 class="title is-2 has-text-centered">{{ .Title | markdownify }}</h2>
                 {{ if .Params.Image }}
                 <div class="columns">
-                    <div class="column is-one-third has-text-centered">
+                    <div class="column has-text-centered" style="align-content: center;">
                         {{ with resources.Get .Params.Image }}
-                        {{ with .Resize "320x" }}
+                        {{ with .Resize "480x webp" }}
                         <img class="img-responsive avatar" src="{{ .Permalink }}" alt="{{ .Name }}">
                         {{ end }}
                         {{ end }}
