@@ -1,6 +1,6 @@
 +++
 title = 'Areas of Expertise'
-image = 'kourtzanis.jpg'
+image = '/img/hands-kb.webp'
 +++
 
 * _Securing_ {{< text-carousel interval=3000 >}}
